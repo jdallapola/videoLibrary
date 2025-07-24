@@ -57,4 +57,37 @@ body {
     margin: 0;
     color: var(--bodyTextColor);
 }
+
+/* COVER HERO */
+#cover-hero {
+  width: 100%;
+  /* altura de 60% da viewport; ajuste ao seu gosto */
+  height: 60vh;          
+  background-image: url('images/cover.png');
+  background-size: cover;            /* cobre toda a área */
+  background-position: 40% left center;/* centraliza o foco */
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+/* opcional: sobreposição escura para destacar texto */
+#cover-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+}
+
+/* opcional: título sobre o cover */
+#cover-hero h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color: #fff;
+  font-size: clamp(2rem, 5vw, 4rem);
+  margin: 0;
+  z-index: 1;
+}
+
                             
